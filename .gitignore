@@ -1,0 +1,6 @@
+node_modules/
+.lakebed/
+.env
+.env.*
+!.env.example
+lakebed/lakebed.json
