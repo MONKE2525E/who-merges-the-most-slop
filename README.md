@@ -4,6 +4,8 @@ Interactive codebase growth chart for upstream [pingdotgg/t3code](https://github
 
 [Live website](https://who-merges-the-most-slop.lakebed.app/)
 
+[Share on X](https://who-merges-the-most-slop.lakebed.app/share). This route serves the same chart with Open Graph and large image Twitter Card metadata in the HTTP response. Lakebed owns the root HTML shell, so use `/share` for link previews. The preview image and editable SVG are included in this repository.
+
 Blue diamonds mark major milestones. White diamonds mark other merged PRs with more than 20,000 changed lines, counting additions and deletions across all files. A major milestone with a PR uses one blue marker and includes its PR details. The contributor chart shows the ten largest contributors by added source-file lines.
 
 The bundled data is a snapshot through October 8, 2026. Source totals include tests, comments, and blank lines, excluding vendored and generated paths, documentation, lockfiles, and data/config files. Contributor totals count rewrites again and do not measure code ownership or effort. Full methods and source links are on the page. There is no automatic updater.
@@ -19,7 +21,7 @@ npm ci
 npm run dev -- --port 3000
 ```
 
-Edit `chart.html`. The sync script regenerates `lakebed/client/chart.ts` before dev, build, and deploy.
+Edit `chart.html`. The sync script regenerates `lakebed/client/chart.ts` and `lakebed/server/chart.ts` before dev, build, and deploy.
 
 ## Deploy
 
